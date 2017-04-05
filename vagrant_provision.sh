@@ -1,9 +1,6 @@
 #!/bin/sh
 # Original script on https://github.com/orendon/vagrant-rails
 
-# enable console colors
-#sed -i '1iforce_color_prompt=yes' ~/.bashrc
-
 # disable docs during gem install
 echo 'gem: --no-rdoc --no-ri' >> ~/.gemrc
 
@@ -13,9 +10,6 @@ sudo apt-get install -y autoconf bison build-essential libssl-dev libyaml-dev li
 
 # SQLite, Git and Node.js
 sudo apt-get install -y libsqlite3-dev git nodejs
-
-# Qt and xvfb-run for Capybara Webkit
-#sudo apt-get install -y libqtwebkit-dev xvfb
 
 # ImageMagick and Rmagick
 sudo apt-get install -y imagemagick libmagickwand-dev
@@ -43,13 +37,6 @@ rbenv install 2.3.3
 rbenv global 2.3.3
 gem install bundler
 rbenv rehash
-
-# Phantomjs
-#sudo wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2 -P /usr/local/share --quiet
-#sudo tar xjf /usr/local/share/phantomjs-1.9.7-linux-x86_64.tar.bz2 -C /usr/local/share
-#sudo ln -s /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs
-#sudo ln -s /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
-#sudo ln -s /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
 
 # cleanup
 sudo apt-get clean
